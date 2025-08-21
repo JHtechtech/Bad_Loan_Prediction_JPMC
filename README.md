@@ -9,7 +9,7 @@ The challenge is to build a model that predicts at application time whether an a
 Project Structure
 EDA - Bad Loan Prediction.ipynb: A Jupyter Notebook containing the comprehensive Exploratory Data Analysis, from initial data inspection to multivariate analysis and key findings.
 
-PyTorch_Loan_Classifier.ipynb: A Jupyter Notebook with the full implementation of the neural network model, including data preprocessing, model training, and inference on the test set.
+PyTorch_Loan_Classifier.txt: A text file with a logic flow on building out a neural network to indicate bad loans.
 
 README.md: This file, providing an overview of the project.
 
@@ -24,9 +24,9 @@ pip install pandas numpy scikit-learn torch matplotlib seaborn jupyter
 2. Execution Steps
 Place Data Files: Download the training_loan_data.csv and testing_loan_data.csv files and place them in the root directory of this project.
 
-Run Exploratory Data Analysis: Open and run all cells in the Loan_EDA.ipynb notebook to see the initial data analysis, visualizations, and insights.
+Run Exploratory Data Analysis: Open and run all cells in the EDA_Bad_Loan_Prediction.ipynb notebook to see the initial data analysis, visualizations, and insights.
 
-Run Model Training and Inference: Please read through the logic flows for now due to limited knowledge on neural networks
+Run Model Training and Inference: Please read through the logic flows in Pytorch_Neural_Networks.txt
 
 Key Findings & Strategic Recommendations
 The analysis produced several actionable insights crucial for optimizing portfolio performance.
