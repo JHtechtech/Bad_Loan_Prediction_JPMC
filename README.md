@@ -4,9 +4,11 @@ Bad Loan (Loan Default) Prediction: An End-to-End Data Science Project
 This repository contains a complete data science project focused on predicting loan defaults. The project includes a thorough Exploratory Data Analysis (EDA), and the logic flows on the neural networks as I'm new to the concept.
 
 Business Problem
+
 The challenge is to build a model that predicts at application time whether an applicant will default on their loan. The data consists of a set of variables that describe the requested loan and the applicant's credit attributes. The goal is to leverage data analysis and machine learning to identify key risk drivers and provide strategic recommendations to optimize the loan portfolio and stipulation process.
 
 Project Structure
+
 EDA - Bad Loan Prediction.ipynb: A Jupyter Notebook containing the comprehensive Exploratory Data Analysis, from initial data inspection to multivariate analysis and key findings.
 
 PyTorch_Loan_Classifier.txt: A text file with a logic flow on building out a neural network to indicate bad loans.
