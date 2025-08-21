@@ -1,0 +1,56 @@
+Phase 1: Design the brain (Model Architecture)
+
+Input Layer: This is the loan decision maker's "in-tray." It has one slot for every piece of data on a loan application.
+
+Hidden Layer: This is the loan decision maker's "reasoning center." It's a group of neurons (we chose 64) that learn to spot complex patterns. For example, one neuron might learn that a high DTI and a "small business" loan purpose is a risky combination.
+
+Output Layer: This is the final decision-maker. It's a single neuron that gives the final recommendation.
+
+Why the Sigmoid function?
+The output neuron needs to give a clear, simple answer. The Sigmoid function is like a "probability converter." It takes any number the neuron produces and squishes it into a value between 0 and 1.
+
+A value close to 1 means: "I'm very confident this is a bad loan."
+
+A value close to 0 means: "I'm very confident this is a good loan."
+It's the perfect tool for a yes/no problem like ours because it gives us a confidence score.
+
+End Result: A defined, but untrained, model structure ready to learn.
+
+Phase 3: The Learning Cycle (Training the loan decision maker)
+This is where the loan decision maker learns from experience by reviewing past loan files.
+
+We repeat this process many times:
+
+Give the loan decision maker a small stack of old loan files (a "batch").
+
+Ask for a prediction: The loan decision maker looks at each file and gives a probability of default (e.g., "I'm 80% sure this one will go bad," which is 0.8).
+
+Compare to the real answer: We look at the file's actual outcome. Let's say the loan was actually bad (a 1). The loan decision maker's prediction of 0.8 was pretty good, but not perfect.
+
+Why the Binary Cross-Entropy (BCE) loss function?
+BCE is like the "teacher" who grades the loan decision maker's prediction. It's specifically designed for yes/no probability problems.
+
+If the loan decision maker predicts 0.9 for a loan that was actually bad (1), the 'teacher' gives a very low "mistake score."
+
+If the loan decision maker predicts 0.1 for a loan that was actually bad (1), the 'teacher' gives a very high "mistake score."
+BCE is the perfect 'teacher' because it understands probabilities and knows how to score them fairly.
+
+Give feedback: The loan decision maker gets the "mistake score" from the teacher.
+
+Why the Adam optimizer?
+Adam is like the loan decision maker's "learning strategy." Based on the mistake score, Adam tells the loan decision maker exactly how to adjust their internal thinking (the weights in the neural network) to do better next time.
+
+Adam is very popular because it's a "smart" learning strategy. It's not too aggressive (doesn't over-correct for one mistake) and not too slow (it learns efficiently). It's a great, reliable choice for most problems.
+
+End Result: A trained loan decision maker (model) who has learned the patterns of what makes a loan likely to go bad.
+
+Phase 4: The Final Exam (Putting the loan decision maker to Work)
+Now we give our trained loan decision maker the stack of new, unseen loan applications from testing_loan_data.csv.
+
+Prepare the New Files: Apply the exact same cleaning steps from Phase 1 to the new data.
+
+Get Predictions: Give the clean files to the trained loan decision maker.
+
+Make the Final Call: The loan decision maker gives a probability for each loan. We use a simple rule: if the probability is over 50% (0.5), we classify it as a bad loan (1).
+
+Save the Results: We record the loan decision maker's final decisions.
