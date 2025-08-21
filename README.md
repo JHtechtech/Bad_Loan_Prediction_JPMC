@@ -36,10 +36,9 @@ Interest Rate is the Dominant Risk Factor: The int_rate is the single most power
 
 A High-Risk Segment Was Identified: Loans for small businesses and renewable energy are especially risky given the top 2 bad flag rates across all loan purposes
 
-The Third-Party Score is Not a Strong Predictor given its ineffectiveness when comparing to the bad flag indicator.
+Lower income population, people who push on their bank card limits, people who have higher DTI, people who inquire on credit more frequently in a short period of time, people who have higher credit utilization tend to point towards a defaulted loan.
 
-Strategic Recommendations
-Refine the Predictive Model: The model's performance can be enhanced by weighting the interest_rate and building interaction features that explicitly flag high-risk combinations (e.g., "large loan for small business").
+The Third-Party Score is Not a Strong Predictor given its ineffectiveness when comparing to the bad flag indicator.
 
 Review Third-Party Tools: 
 
